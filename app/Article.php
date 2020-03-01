@@ -36,6 +36,11 @@ class Article extends Model
     {
         return $this->belongsToMany('App\User','article_authors','article_id','author_id');
     }
+    
+    public function type()
+    {
+        return $this->belongsTo('\App\ArticleType');
+    }
     // ,'article_id','category_id'
 
 }

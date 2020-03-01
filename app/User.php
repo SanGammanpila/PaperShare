@@ -15,6 +15,11 @@ class User extends Authenticatable
        return $this->belongsTo('\App\University','university');
     }
 
+    public function user_faculty()
+    {
+        return $this->belongsTo('\App\Faculty','faculty','id');
+    }
+
     public function articles()
     {
         return $this->belongsToMany('App\Article','article_authors','author_id','article_id');
@@ -24,6 +29,12 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Comment');
     }
+
+    public function bookmarks()
+    {
+        return $this->hasMany('\App\Bookmark');
+    }
+
     /**
      * The attributes that are mass assignable.
      *

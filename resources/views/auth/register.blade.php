@@ -26,8 +26,8 @@
                         </div>
 
 
-                        <input type="text" placeholder="university id" name="university">
-                        <input type="text" placeholder="faculty id" name="faculty">
+                        {{-- <input type="text" placeholder="university id" name="university">
+                        <input type="text" placeholder="faculty id" name="faculty"> --}}
 
 
                         <div class="form-group row">
